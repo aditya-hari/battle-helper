@@ -44,7 +44,13 @@
     align-items: stretch;
   }
   @media (max-width: 700px) {
+    body { padding: 12px; }
     .layout { grid-template-columns: 1fr; }
+    .layout > *:nth-child(odd)  { order: 1; }
+    .layout > *:nth-child(even) { order: 2; }
+    .field input[type="number"] { width: 100%; }
+    .combo-table { display: block; overflow-x: auto; }
+    .leader-btn { padding: 8px 12px; }
   }
   .cell {
     background: var(--surface);
